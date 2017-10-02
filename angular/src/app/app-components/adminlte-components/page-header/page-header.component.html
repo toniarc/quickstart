@@ -1,0 +1,11 @@
+<section class="content-header">
+  <h1>
+    {{title}}
+    <small>{{description}}</small>
+  </h1>
+  <ol class="breadcrumb">
+    <li *ngFor="let item of breadcrumb; let isFirst = first">
+      <i *ngIf="isFirst" class="fa fa-dashboard"></i> {{item}}
+    </li>
+  </ol>
+</section>

@@ -1,0 +1,11 @@
+# Eclipse
+java/.classpath
+java/.project
+java/.settings/
+
+# Maven
+java/log/
+java/target/
+
+#vscode
+angular/node_modules/

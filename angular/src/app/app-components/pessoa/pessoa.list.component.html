@@ -1,0 +1,92 @@
+<div class="row">
+    <div class="col-xs-12">
+        <div class="box box-primary">
+            <div class="box-header with-border">
+                <h3 class="box-title">Filtros de Pesquisa</h3>
+            </div>
+            <!-- /.box-header -->
+            <!-- form start -->
+            <form role="form" #pessoaSearchForm="ngForm" (ngSubmit)="search(1)">
+                <div class="box-body">
+                    <div class="form-group">
+                        <label for="nome">Nome</label>
+                        <input type="text" class="form-control" id="nome" name="nome" [(ngModel)]="pessoa.nome" placeholder="Pesquisar por nome">
+                    </div>
+                </div>
+                <div class="box-footer">
+                    <button type="button" class="btn btn-primary" (click)="search(1)">Pesquisar</button>
+                    <button type="button" class="btn btn-primary" routerLink="/main/pessoa-form">Novo</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-xs-12">
+        <div class="box">
+
+            <!-- /.box-header -->
+            <div class="box-body">
+                <div id="example1_wrapper" class="dataTables_wrapper form-inline dt-bootstrap">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="dataTables_length" id="example1_length">
+                                <label>Exibir 
+                                    <select name="example1_length" class="form-control input-sm" (change)="onChangeItemsPerPage($event.target.value)">
+                                        <option *ngFor="let item of itemsPerPage" [value]="item">{{item}}</option>
+                                    </select> 
+                                registros por página</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <table id="example1" class="table table-bordered table-hover">
+                                <thead>
+                                    <tr>
+                                        <th style="width: 296px;">Nome</th>
+                                        <th style="width: 361px;">Data Nascimento</th>
+                                        <th style="width: 321px;">CPF</th>
+                                        <th style="width: 256px;">Sexo</th>
+                                        <th style="width: 256px;"></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let pessoa of pagedItems; let i = index;">
+                                        <td>{{pessoa.nome}}</td>
+                                        <td>{{pessoa.dataNascimento}}</td>
+                                        <td>{{pessoa.cpf}}</td>
+                                        <td>{{pessoa.sexo}}</td>
+                                        <td>
+                                            <div class="btn-group">
+                                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                    <span class="glyphicons glyphicon glyphicon-cog"></span>
+                                                </button>
+                                                <ul class="dropdown-menu">
+                                                    <li><a href="#" [routerLink]="['/main/pessoa-form', pessoa.id]">Editar</a></li>
+                                                    <li><a href="#">Ativar</a></li>
+                                                    <li><a href="#">Desativar</a></li>
+                                                    <li><a href="#">Excluir</a></li>
+                                                </ul>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-5" style="margin-top: 25px">
+                            <div class="dataTables_info" id="example1_info" role="status" aria-live="polite">Retornou {{totalItems}} registro(s)</div>
+                        </div>
+                        <div class="col-sm-7">
+                            <datatable-pagination [(pager)]="pager" (pageChange)="onChangePage($event)"></datatable-pagination>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /.box-body -->
+        </div>
+    </div>
+</div>

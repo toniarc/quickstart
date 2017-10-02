@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.0"
+	xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+
+
+	<!-- If you are using JBoss AS7 with JTA transaction then use this persistence-unit -->
+
+	<persistence-unit name="defaultPU" transaction-type="JTA">
+		<jta-data-source>java:jboss/datasources/hospitalarDS</jta-data-source>
+
+		<class>br.gov.pa.iasep.esaude.entity.Acesso</class>
+		<class>br.gov.pa.iasep.esaude.entity.Action</class>
+		<class>br.gov.pa.iasep.esaude.entity.Agencia</class>
+		<class>br.gov.pa.iasep.esaude.entity.Auditoria</class>
+		<class>br.gov.pa.iasep.esaude.entity.Bairro</class>
+		<class>br.gov.pa.iasep.esaude.entity.Banco</class>
+		<class>br.gov.pa.iasep.esaude.entity.CadastroLei</class>
+		<class>br.gov.pa.iasep.esaude.entity.Categoria</class>
+		<class>br.gov.pa.iasep.esaude.entity.CategoriaCredenciado</class>
+		<class>br.gov.pa.iasep.esaude.entity.ComprovanteMatricula</class>
+		<class>br.gov.pa.iasep.esaude.entity.ConselhoRegional</class>
+		<class>br.gov.pa.iasep.esaude.entity.Credenciado</class>
+		<class>br.gov.pa.iasep.esaude.entity.CredenciadoClassificacao</class>
+		<class>br.gov.pa.iasep.esaude.entity.CredenciadoFolha</class>
+		<class>br.gov.pa.iasep.esaude.entity.CredenciadoProcedimento</class>
+		<class>br.gov.pa.iasep.esaude.entity.CredenciadoProcedimentoFilme</class>
+		<class>br.gov.pa.iasep.esaude.entity.CredenciadoProcedimentoUs</class>
+		<class>br.gov.pa.iasep.esaude.entity.Dependente</class>
+		<class>br.gov.pa.iasep.esaude.entity.EntregaDocumento</class>
+		<class>br.gov.pa.iasep.esaude.entity.Escolaridade</class>
+		<class>br.gov.pa.iasep.esaude.entity.Especialidade</class>
+		<class>br.gov.pa.iasep.esaude.entity.Estado</class>
+		<class>br.gov.pa.iasep.esaude.entity.EstadoCivil</class>
+		<class>br.gov.pa.iasep.esaude.entity.Funcionalidade</class>
+		<class>br.gov.pa.iasep.esaude.entity.FuncionalidadeAgenda</class>
+		<class>br.gov.pa.iasep.esaude.entity.Glosa</class>
+		<class>br.gov.pa.iasep.esaude.entity.GrauDependencia</class>
+		<class>br.gov.pa.iasep.esaude.entity.Grupo</class>
+		<class>br.gov.pa.iasep.esaude.entity.GrupoProcedimento</class>
+		<class>br.gov.pa.iasep.esaude.entity.Gsr</class>
+		<class>br.gov.pa.iasep.esaude.entity.GuiaServico</class>
+		<class>br.gov.pa.iasep.esaude.entity.LimiteLoteCredenciado</class>
+		<class>br.gov.pa.iasep.esaude.entity.LogCriticaDependentesGrau</class>
+		<class>br.gov.pa.iasep.esaude.entity.LogCriticaDependentesMenorSobGuarda</class>
+		<class>br.gov.pa.iasep.esaude.entity.LogCriticaDependentesUniversitarios</class>
+		<class>br.gov.pa.iasep.esaude.entity.LogCriticaDependentesVinculo</class>
+		<class>br.gov.pa.iasep.esaude.entity.LogLimiteLoteCredenciado</class>
+		<class>br.gov.pa.iasep.esaude.entity.LogSegurado</class>
+		<class>br.gov.pa.iasep.esaude.entity.Lote</class>
+		<class>br.gov.pa.iasep.esaude.entity.LoteCancelado</class>
+		<class>br.gov.pa.iasep.esaude.entity.MedicoCrm</class>
+		<class>br.gov.pa.iasep.esaude.entity.Mensagem</class>
+		<class>br.gov.pa.iasep.esaude.entity.MensagemUsuario</class>
+		<class>br.gov.pa.iasep.esaude.entity.Modulo</class>
+		<class>br.gov.pa.iasep.esaude.entity.Municipio</class>
+		<class>br.gov.pa.iasep.esaude.entity.NotaLote</class>
+		<class>br.gov.pa.iasep.esaude.entity.PagamentoLote</class>
+		<class>br.gov.pa.iasep.esaude.entity.ParticipaPrograma</class>
+		<class>br.gov.pa.iasep.esaude.entity.Perfil</class>
+		<class>br.gov.pa.iasep.esaude.entity.PerfilAssistencial</class>
+		<class>br.gov.pa.iasep.esaude.entity.PessoaFisica</class>
+		<class>br.gov.pa.iasep.esaude.entity.PessoaJuridica</class>
+		<class>br.gov.pa.iasep.esaude.entity.Procedimento</class>
+		<class>br.gov.pa.iasep.esaude.entity.ProcedimentoClassificacao</class>
+		<class>br.gov.pa.iasep.esaude.entity.ProcedimentoEspecialidade</class>
+		<class>br.gov.pa.iasep.esaude.entity.ProcedimentoExtra</class>
+		<class>br.gov.pa.iasep.esaude.entity.Profissional</class>
+		<class>br.gov.pa.iasep.esaude.entity.ProgramaAtendimento</class>
+		<class>br.gov.pa.iasep.esaude.entity.ProtocoloLote</class>
+		<class>br.gov.pa.iasep.esaude.entity.Regiao</class>
+		<class>br.gov.pa.iasep.esaude.entity.RegraPrograma</class>
+		<class>br.gov.pa.iasep.esaude.entity.Segurado</class>
+		<class>br.gov.pa.iasep.esaude.entity.SeguradoReingresso</class>
+		<class>br.gov.pa.iasep.esaude.entity.ServicoGlosa</class>
+		<class>br.gov.pa.iasep.esaude.entity.ServicoLoteCancelado</class>
+		<class>br.gov.pa.iasep.esaude.entity.ServicoUtilizado</class>
+		<class>br.gov.pa.iasep.esaude.entity.ServicoUtilizadoCancelado</class>
+		<class>br.gov.pa.iasep.esaude.entity.ServicoUtilizadoEstorno</class>
+		<class>br.gov.pa.iasep.esaude.entity.Sistema</class>
+		<class>br.gov.pa.iasep.esaude.entity.SistemaModulo</class>
+		<class>br.gov.pa.iasep.esaude.entity.SituacaoCredenciado</class>
+		<class>br.gov.pa.iasep.esaude.entity.SituacaoLote</class>
+		<class>br.gov.pa.iasep.esaude.entity.SituacaoSegurado</class>
+		<class>br.gov.pa.iasep.esaude.entity.Tela</class>
+		<class>br.gov.pa.iasep.esaude.entity.Titular</class>
+		<class>br.gov.pa.iasep.esaude.entity.UnidadeProcedimento</class>
+		<class>br.gov.pa.iasep.esaude.entity.Us</class>
+		<class>br.gov.pa.iasep.esaude.entity.Usuario</class>
+		<class>br.gov.pa.iasep.esaude.entity.VinculoEmpregaticio</class>
+
+		<class>br.gov.pa.iasep.esaude.entity.id.AcessoId</class>
+		<class>br.gov.pa.iasep.esaude.entity.id.ActionId</class>
+		<class>br.gov.pa.iasep.esaude.entity.id.AgenciaId</class>
+		<class>br.gov.pa.iasep.esaude.entity.id.ComprovanteMatriculaId</class>
+		<class>br.gov.pa.iasep.esaude.entity.id.CredenciadoFolhaId</class>
+		<class>br.gov.pa.iasep.esaude.entity.id.CredenciadoProcedimentoFilmeId</class>
+		<class>br.gov.pa.iasep.esaude.entity.id.CredenciadoProcedimentoId</class>
+		<class>br.gov.pa.iasep.esaude.entity.id.CredenciadoProcedimentoUsId</class>
+		<class>br.gov.pa.iasep.esaude.entity.id.LoteCanceladoId</class>
+		<class>br.gov.pa.iasep.esaude.entity.id.LoteId</class>
+		<class>br.gov.pa.iasep.esaude.entity.id.MensagemUsuarioId</class>
+		<class>br.gov.pa.iasep.esaude.entity.id.PagamentoLoteId</class>
+		<class>br.gov.pa.iasep.esaude.entity.id.ProtocoloLoteId</class>
+		<class>br.gov.pa.iasep.esaude.entity.id.RegraProgramaId</class>
+		<class>br.gov.pa.iasep.esaude.entity.id.ServicoLoteCanceladoId</class>
+		<class>br.gov.pa.iasep.esaude.entity.id.SistemaModuloId</class>
+		<class>br.gov.pa.iasep.esaude.entity.id.TelaId</class>
+
+		<exclude-unlisted-classes>true</exclude-unlisted-classes>
+		<properties>
+			<property name="hibernate.show_sql" value="true" />
+			<property name="hibernate.format_sql" value="true" />
+			<property name="hibernate.dialect" value="org.hibernate.dialect.SQLServerDialect" />
+			<property name="hibernate.ejb.entitymanager_factory_name" value="esaudeEntityManagerFactory"/>
+			<property name="hibernate.transaction.jta.platform" value="org.hibernate.service.jta.platform.internal.JBossAppServerJtaPlatform" />
+			<!-- 
+			 -->
+		</properties>
+	</persistence-unit>
+
+</persistence>
