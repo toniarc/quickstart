@@ -12,7 +12,7 @@ import { Credentials } from '../../interage/security/credentials';
 })
 export class LoginComponent extends ControleAcessoLogin  {
 
-  private credentials: Credentials;
+  private credentials: Credentials = new Credentials();
 
   constructor(auth: AuthenticationService, router: Router) {
     super(auth, router);

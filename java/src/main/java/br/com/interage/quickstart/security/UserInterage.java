@@ -7,12 +7,22 @@ import br.gov.pa.prodepa.security.User;
 
 public class UserInterage implements User{
 
+	private Long id;
 	private String login;
 	private List<String> roles;
 	
-	public UserInterage(String login, String[] roles) {
+	public UserInterage(Long id, String login, String[] roles) {
+		this.id = id;
 		this.login = login;
 		this.roles = Arrays.asList(roles);
+	}
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
 	}
 
 	@Override

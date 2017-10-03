@@ -8,7 +8,7 @@ export class HttpUtilService {
     private http: Http;
     private headers: Headers;
     private options: RequestOptionsArgs;
-    private baseUrl: string = 'http://localhost:8080/quickstart-backend/api';
+    private baseUrl: string = 'http://10.1.3.49:8080/quickstart-backend/api';
     
     constructor(http: Http){
         this.http = http;
@@ -26,7 +26,7 @@ export class HttpUtilService {
 
     post(resource: string, payload, headers?: Map<string, string>) : Observable<Response> {
         if(headers && headers.size > 0){
-            headers.forEach(function(value: string, key: string) {
+            headers.forEach((value: string, key: string) => {
                 this.options.headers.append(key, value);
             });
         }

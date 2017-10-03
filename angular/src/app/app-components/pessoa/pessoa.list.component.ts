@@ -61,6 +61,8 @@ export class PessoaListComponent implements OnInit {
       this.totalItems = response.count;
       this.pagedItems = response.list;
       this.pager = this.pagerService.getPager(this.totalItems, page, this.pageSize);
+    }, error => {
+      console.log(error);
     });
   }
 
