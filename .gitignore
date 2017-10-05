@@ -3,6 +3,8 @@ java/.classpath
 java/.project
 java/.settings/
 
+.project
+
 # Maven
 java/log/
 java/target/

@@ -8,7 +8,7 @@ export class HttpUtilService {
     private http: Http;
     private headers: Headers;
     private options: RequestOptionsArgs;
-    private baseUrl: string = 'http://10.1.3.49:8080/quickstart-backend/api';
+    private baseUrl: string = 'http://localhost:8080/quickstart-backend/api';
     
     constructor(http: Http){
         this.http = http;
